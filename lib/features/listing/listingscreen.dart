@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceries/constants/themecolors.dart';
 import 'package:groceries/features/listing/listingcontroller.dart';
+import 'package:groceries/features/listing/view/mainview/listingmainview.dart';
 import 'package:groceries/features/listing/widget/offerwidget.dart';
 import 'package:groceries/widgets/formfield.dart';
 
@@ -146,7 +147,13 @@ class ListingScreen extends StatelessWidget {
                                       )),
                             ))
                       ],
-                    )
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    SizedBox(
+                        height: MediaQuery.of(context).size.height / 2,
+                        child: const ListingtMainView())
                   ],
                 ),
               ),
