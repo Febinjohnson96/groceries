@@ -1,6 +1,6 @@
 # groceries
 
-A new Flutter project.
+Online grocery store application built using flutter.
 
 ## Getting Started
 
