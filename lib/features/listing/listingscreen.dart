@@ -151,9 +151,9 @@ class ListingScreen extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                     SizedBox(
+                    SizedBox(
                         height: MediaQuery.of(context).size.height / 2,
-                      child: ListingtMainView())
+                        child: const ListingtMainView())
                   ],
                 ),
               ),
