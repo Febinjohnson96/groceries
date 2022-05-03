@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:groceries/models/productmodel.dart';
 
-class VegetableListController extends GetxController {
+class FirstListController extends GetxController {
   List<ProductModel> get vegetableList => [
         ProductModel(
             imagePath:
