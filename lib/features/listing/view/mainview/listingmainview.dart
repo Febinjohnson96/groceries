@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:groceries/constants/themecolors.dart';
 import 'package:groceries/features/listing/view/firstlistview/firstlistscreen.dart';
 import 'package:groceries/features/listing/view/mainview/listingmaincontroller.dart';
+import 'package:groceries/features/listing/view/thirdlistview/thirddlistscreen.dart';
 
 class ListingtMainView extends StatelessWidget {
   const ListingtMainView({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class ListingtMainView extends StatelessWidget {
                           child: TabBarView(children: [
                             const FirstListScreen(),
                             Image.asset("assets/images/meaticon.png"),
-                            Image.asset("assets/images/fruitsicon.png"),
+                            const ThirdListScreen(),
                             Image.asset("assets/images/breadicon.png"),
                           ]),
                         )
