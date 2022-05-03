@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:groceries/features/listing/view/vegetableview/vegetablelistcontroller.dart';
+import 'package:groceries/features/listing/view/firstlistview/firstlistscreencontroller.dart';
 import 'package:groceries/features/listing/widget/productlistingcard.dart';
 
-class VegetableListScreen extends StatelessWidget {
-  const VegetableListScreen({Key? key}) : super(key: key);
+class FirstListScreen extends StatelessWidget {
+  const FirstListScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<VegetableListController>(
-      init: VegetableListController(),
+    return GetBuilder<FirstListController>(
+      init: FirstListController(),
       builder: (controller) {
         return Scaffold(
           body: SizedBox(
