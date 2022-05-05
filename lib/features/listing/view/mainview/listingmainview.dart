@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/constants/themecolors.dart';
 import 'package:groceries/features/listing/view/firstlistview/firstlistscreen.dart';
+import 'package:groceries/features/listing/view/fouthview/fourtlistscreen.dart';
 import 'package:groceries/features/listing/view/mainview/listingmaincontroller.dart';
 import 'package:groceries/features/listing/view/secondlistview/secondlistscreen.dart';
 import 'package:groceries/features/listing/view/thirdlistview/thirddlistscreen.dart';
@@ -31,11 +32,11 @@ class ListingtMainView extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           height: MediaQuery.of(context).size.height / 2.5,
-                          child: TabBarView(children: [
-                            const FirstListScreen(),
-                            const SecondListScreen(),
-                            const ThirdListScreen(),
-                            Image.asset("assets/images/breadicon.png"),
+                          child: const TabBarView(children: [
+                            FirstListScreen(),
+                            SecondListScreen(),
+                            ThirdListScreen(),
+                            FourthListScreen(),
                           ]),
                         )
                       ],
