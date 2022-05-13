@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProductListingCardWiget extends StatelessWidget {
-  const ProductListingCardWiget(
+class ProductListingCardWidget extends StatelessWidget {
+  const ProductListingCardWidget(
       {Key? key,
       required this.imagePath,
       required this.productName,
