@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:groceries/features/listing/view/presenter/listviewpresenter.dart';
 import 'package:groceries/features/listing/view/secondlistview/secondlistcontroller.dart';
 import 'package:groceries/features/listing/widget/productlistingcard.dart';
 
@@ -23,13 +24,18 @@ class SecondListScreen extends StatelessWidget {
                     mainAxisSpacing: 0,
                   ),
                   itemBuilder: (context, index) {
-                    return ProductListingCardWiget(
-                        imagePath:
-                            controller.meatsList[index].imagePath.toString(),
-                        productName:
-                            controller.meatsList[index].name.toString(),
-                        productPrice:
-                            controller.meatsList[index].price.toString());
+                    return InkWell(
+                      onTap: () => ListingViewPresenter.productPresenter(
+                          context: context,
+                          productdetails: controller.meatsList[index]),
+                      child: ProductListingCardWidget(
+                          imagePath:
+                              controller.meatsList[index].imagePath.toString(),
+                          productName:
+                              controller.meatsList[index].name.toString(),
+                          productPrice:
+                              controller.meatsList[index].price.toString()),
+                    );
                   }),
             ),
           );

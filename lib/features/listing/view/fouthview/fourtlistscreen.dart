@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:groceries/features/listing/view/fouthview/fourthlistcontroller.dart';
+import 'package:groceries/features/listing/view/presenter/listviewpresenter.dart';
 import 'package:groceries/features/listing/widget/productlistingcard.dart';
 
 class FourthListScreen extends StatelessWidget {
@@ -23,13 +24,18 @@ class FourthListScreen extends StatelessWidget {
                     mainAxisSpacing: 0,
                   ),
                   itemBuilder: (context, index) {
-                    return ProductListingCardWiget(
-                        imagePath:
-                            controller.breadList[index].imagePath.toString(),
-                        productName:
-                            controller.breadList[index].name.toString(),
-                        productPrice:
-                            controller.breadList[index].price.toString());
+                    return InkWell(
+                      onTap: () => ListingViewPresenter.productPresenter(
+                          context: context,
+                          productdetails: controller.breadList[index]),
+                      child: ProductListingCardWidget(
+                          imagePath:
+                              controller.breadList[index].imagePath.toString(),
+                          productName:
+                              controller.breadList[index].name.toString(),
+                          productPrice:
+                              controller.breadList[index].price.toString()),
+                    );
                   }),
             ),
           );
