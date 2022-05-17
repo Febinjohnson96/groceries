@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:groceries/widgets/appbutton.dart';
 
 class ProductDetailView extends StatelessWidget {
   const ProductDetailView(
@@ -48,7 +49,16 @@ class ProductDetailView extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
             ),
-          )
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          SizedBox(
+            height: 40,
+              width: double.infinity,
+              child: AppButton(
+                  buttonTitle: 'Add to Cart',
+                  callback: () => debugPrint(productName)))
         ]),
       ),
     ));
